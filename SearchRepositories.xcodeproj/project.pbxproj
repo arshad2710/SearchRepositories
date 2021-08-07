@@ -19,6 +19,9 @@
 		BF51CE4626BE37C100E7E196 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE4526BE37C100E7E196 /* CharacterSet.swift */; };
 		BF51CE4826BE381B00E7E196 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE4726BE381B00E7E196 /* SearchAPI.swift */; };
 		BF51CE4B26BE384B00E7E196 /* RepoSearchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE4A26BE384B00E7E196 /* RepoSearchListModel.swift */; };
+		BF51CE5026BE390C00E7E196 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE4E26BE390C00E7E196 /* SearchTableViewCell.swift */; };
+		BF51CE5126BE390C00E7E196 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */; };
+		BF51CE5326BE392900E7E196 /* RepoListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		BF51CE4526BE37C100E7E196 /* CharacterSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
 		BF51CE4726BE381B00E7E196 /* SearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		BF51CE4A26BE384B00E7E196 /* RepoSearchListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSearchListModel.swift; sourceTree = "<group>"; };
+		BF51CE4E26BE390C00E7E196 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +89,8 @@
 		BF2D051926BE3013009D5AD8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF2D050926BE2FD3009D5AD8 /* RepoListViewController.swift */,
+				BF51CE4D26BE38FC00E7E196 /* Cells */,
+				BF51CE4C26BE38F200E7E196 /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +122,24 @@
 				BF51CE4A26BE384B00E7E196 /* RepoSearchListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BF51CE4C26BE38F200E7E196 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF2D050926BE2FD3009D5AD8 /* RepoListViewController.swift */,
+				BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF51CE4D26BE38FC00E7E196 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF51CE4E26BE390C00E7E196 /* SearchTableViewCell.swift */,
+				BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2D051226BE2FD5009D5AD8 /* LaunchScreen.storyboard in Resources */,
+				BF51CE5126BE390C00E7E196 /* SearchTableViewCell.xib in Resources */,
 				BF2D050F26BE2FD5009D5AD8 /* Assets.xcassets in Resources */,
 				BF2D050D26BE2FD3009D5AD8 /* Main.storyboard in Resources */,
 			);
@@ -196,6 +222,8 @@
 				BF51CE4626BE37C100E7E196 /* CharacterSet.swift in Sources */,
 				BF51CE4026BE378D00E7E196 /* APIService.swift in Sources */,
 				BF2D050826BE2FD3009D5AD8 /* SceneDelegate.swift in Sources */,
+				BF51CE5326BE392900E7E196 /* RepoListTableViewDataSource.swift in Sources */,
+				BF51CE5026BE390C00E7E196 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
