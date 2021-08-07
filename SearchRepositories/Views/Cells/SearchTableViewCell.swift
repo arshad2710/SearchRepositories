@@ -11,7 +11,7 @@ class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var repoName: UILabel!
     
-    var repo : Item? {
+    var repo : Repo? {
         didSet {
             repoName.text = repo?.name
         }
