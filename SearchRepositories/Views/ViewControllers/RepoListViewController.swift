@@ -16,6 +16,8 @@ class RepoListViewController: UIViewController {
     private var viewModel: HomeViewModel!
     
     private var dataSource : SearchRepoTableViewDataSource<SearchTableViewCell,Repo>!
+    var currentNoOfPerPage : Int = 10
+    var isLoadingList : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +71,18 @@ extension RepoListViewController :UISearchBarDelegate{
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "RepoDetailsViewController") as! RepoDetailsViewController
         vc.viewModel = RepoDetailsViewModel(item: self.viewModel.repoData[indexPath.row])
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height ) && !isLoadingList){
+            self.isLoadingList = true
+            self.currentNoOfPerPage += 1
+            self.viewModel.callFuncToGetEmpData(q: searchBar.text ?? "", page: currentNoOfPerPage)
+            self.viewModel.bindRepoViewModelToController = {
+                self.isLoadingList = false
+                self.updateDataSource()
+            }
+        }
     }
     
 }
