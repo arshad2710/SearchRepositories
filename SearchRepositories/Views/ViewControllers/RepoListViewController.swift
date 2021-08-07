@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RepoListViewController: UIViewController {
     
     @IBOutlet weak var repoTableView: UITableView!
     

@@ -22,6 +22,13 @@
 		BF51CE5026BE390C00E7E196 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE4E26BE390C00E7E196 /* SearchTableViewCell.swift */; };
 		BF51CE5126BE390C00E7E196 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */; };
 		BF51CE5326BE392900E7E196 /* RepoListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */; };
+		BF51CE5626BE48F000E7E196 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5526BE48F000E7E196 /* HomeViewModel.swift */; };
+		BF51CE5826BE490B00E7E196 /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5726BE490B00E7E196 /* RepoDetailsViewController.swift */; };
+		BF51CE5A26BE497500E7E196 /* RepoContributorsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5926BE497500E7E196 /* RepoContributorsDataSource.swift */; };
+		BF51CE5C26BE498700E7E196 /* RepoContributorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5B26BE498700E7E196 /* RepoContributorModel.swift */; };
+		BF51CE5E26BE49B800E7E196 /* ContributorsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE5D26BE49B800E7E196 /* ContributorsAPI.swift */; };
+		BF51CE6126BE49E800E7E196 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE6026BE49E800E7E196 /* Extensions.swift */; };
+		BF51CE6326BE4A2700E7E196 /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51CE6226BE4A2700E7E196 /* RepoDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,13 @@
 		BF51CE4E26BE390C00E7E196 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListTableViewDataSource.swift; sourceTree = "<group>"; };
+		BF51CE5526BE48F000E7E196 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BF51CE5726BE490B00E7E196 /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		BF51CE5926BE497500E7E196 /* RepoContributorsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoContributorsDataSource.swift; sourceTree = "<group>"; };
+		BF51CE5B26BE498700E7E196 /* RepoContributorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoContributorModel.swift; sourceTree = "<group>"; };
+		BF51CE5D26BE49B800E7E196 /* ContributorsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorsAPI.swift; sourceTree = "<group>"; };
+		BF51CE6026BE49E800E7E196 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BF51CE6226BE4A2700E7E196 /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,8 @@
 		BF2D050426BE2FD3009D5AD8 /* SearchRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				BF51CE5F26BE49DD00E7E196 /* Extensions */,
+				BF51CE5426BE48DD00E7E196 /* ViewModels */,
 				BF51CE4926BE383E00E7E196 /* Models */,
 				BF51CE3E26BE377E00E7E196 /* Network */,
 				BF2D051A26BE3040009D5AD8 /* AppDelegate */,
@@ -111,6 +127,7 @@
 				BF51CE4326BE37AF00E7E196 /* Request.swift */,
 				BF51CE4726BE381B00E7E196 /* SearchAPI.swift */,
 				BF51CE4126BE379500E7E196 /* GitHubService.swift */,
+				BF51CE5D26BE49B800E7E196 /* ContributorsAPI.swift */,
 				BF51CE4526BE37C100E7E196 /* CharacterSet.swift */,
 			);
 			path = Network;
@@ -120,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				BF51CE4A26BE384B00E7E196 /* RepoSearchListModel.swift */,
+				BF51CE5B26BE498700E7E196 /* RepoContributorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +145,8 @@
 		BF51CE4C26BE38F200E7E196 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF51CE5726BE490B00E7E196 /* RepoDetailsViewController.swift */,
+				BF51CE5926BE497500E7E196 /* RepoContributorsDataSource.swift */,
 				BF2D050926BE2FD3009D5AD8 /* RepoListViewController.swift */,
 				BF51CE5226BE392900E7E196 /* RepoListTableViewDataSource.swift */,
 			);
@@ -140,6 +160,23 @@
 				BF51CE4F26BE390C00E7E196 /* SearchTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BF51CE5426BE48DD00E7E196 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF51CE5526BE48F000E7E196 /* HomeViewModel.swift */,
+				BF51CE6226BE4A2700E7E196 /* RepoDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BF51CE5F26BE49DD00E7E196 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF51CE6026BE49E800E7E196 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,14 +251,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF51CE4226BE379500E7E196 /* GitHubService.swift in Sources */,
+				BF51CE6326BE4A2700E7E196 /* RepoDetailsViewModel.swift in Sources */,
+				BF51CE5C26BE498700E7E196 /* RepoContributorModel.swift in Sources */,
 				BF51CE4426BE37AF00E7E196 /* Request.swift in Sources */,
 				BF51CE4B26BE384B00E7E196 /* RepoSearchListModel.swift in Sources */,
 				BF51CE4826BE381B00E7E196 /* SearchAPI.swift in Sources */,
+				BF51CE5A26BE497500E7E196 /* RepoContributorsDataSource.swift in Sources */,
 				BF2D050A26BE2FD3009D5AD8 /* RepoListViewController.swift in Sources */,
 				BF2D050626BE2FD3009D5AD8 /* AppDelegate.swift in Sources */,
+				BF51CE5E26BE49B800E7E196 /* ContributorsAPI.swift in Sources */,
 				BF51CE4626BE37C100E7E196 /* CharacterSet.swift in Sources */,
+				BF51CE5626BE48F000E7E196 /* HomeViewModel.swift in Sources */,
+				BF51CE5826BE490B00E7E196 /* RepoDetailsViewController.swift in Sources */,
 				BF51CE4026BE378D00E7E196 /* APIService.swift in Sources */,
 				BF2D050826BE2FD3009D5AD8 /* SceneDelegate.swift in Sources */,
+				BF51CE6126BE49E800E7E196 /* Extensions.swift in Sources */,
 				BF51CE5326BE392900E7E196 /* RepoListTableViewDataSource.swift in Sources */,
 				BF51CE5026BE390C00E7E196 /* SearchTableViewCell.swift in Sources */,
 			);
